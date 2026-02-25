@@ -6,6 +6,7 @@ COPY . .
 RUN npm run build
 
 FROM nginx:alpine
+RUN apk update && apk upgrade
 COPY --from=build /app/dist /usr/share/nginx/html
 expose 80
 CMD ["nginx", "-g", "daemon off;"]
