@@ -40,7 +40,7 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      - name: : installation of dependencies
+      - name: installation of dependencies
         run: npm ci
 
       - name: run ECLint
