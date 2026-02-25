@@ -103,7 +103,7 @@ jobs:
             username: ${{ github.actor }}
             password: ${{ secrets.TOKEN }}
         - name: set lowercase image name
-          run: echo "IMAGENAME=$(echo $GITHUB_REPOSITORY | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+          run: echo "IMAGE_NAME=$(echo $GITHUB_REPOSITORY | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
 
         - name: extract metadata from docker
           id: meta
