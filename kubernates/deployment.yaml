@@ -16,6 +16,21 @@ spec:
       spec:
         containers:
           - name: tic-tac-toe
-            image: 
+            image: ghcr.io/rutvikgalale/tic-tac-toe:v1
+            imagePullPolicy: Always
             ports:
               - containerPort: 80
+            livenessProbe:
+              httpGet:
+                path: /
+                port: 80
+              initialDelaySeconds: 30
+              periodSeconds: 10
+            resources:
+              limits:
+                cpu: "0.5"
+                memory: "512Mi"
+                  requests:
+                    cpu: "0.2"
+                    memory: "256Mi"
+
