@@ -6,9 +6,9 @@ metadata:
     app: tic-tac-toe
 spec:
   replicas: 3
-    selector:
-      matchLabels:
-        app: tic-tac-toe
+  selector:
+    matchLabels:
+      app: tic-tac-toe
   template:
     metadata:
       labels:
