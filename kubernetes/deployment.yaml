@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: tic-tac-toe
-          image: ghcr.io/rutvikgalale/tic-tac-toe:sha-b4ea72869d74bdce74fca9286b4b0d74aed9a8cb
+          image: ghcr.io/Rutvikgalale/tic-tac-toe:sha-4b06f3bbff6db6df72fbd43503750b193346b901
           imagePullPolicy: Always
           ports:
             - containerPort: 80
