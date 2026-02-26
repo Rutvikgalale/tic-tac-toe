@@ -13,24 +13,25 @@ spec:
     metadata:
       labels:
         app: tic-tac-toe
-      spec:
-        containers:
-          - name: tic-tac-toe
-            image: ghcr.io/Rutvikgalale/tic-tac-toe:sha-92579de735fd455b14c08a7aef53dc43fa6a3736
-            imagePullPolicy: Always
-            ports:
-              - containerPort: 80
-            livenessProbe:
-              httpGet:
-                path: /
-                port: 80
-              initialDelaySeconds: 30
-              periodSeconds: 10
-            resources:
-              limits:
-                cpu: "0.5"
-                memory: "512Mi"
-                  requests:
-                    cpu: "0.2"
-                    memory: "256Mi"
+    spec:
+      containers:
+        - name: tic-tac-toe
+          image: ghcr.io/Rutvikgalale/tic-tac-toe:sha-92579de735fd455b14c08a7aef53dc43fa6a3736
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
 
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 30
+            periodSeconds: 10
+
+          resources:
+            limits:
+              cpu: "0.5"
+              memory: "512Mi"
+            requests:
+              cpu: "0.2"
+              memory: "256Mi"
